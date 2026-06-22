@@ -13,10 +13,16 @@ export default function QuoteA4Document({ input, output }: Props) {
 
   // 유지보수·관리자 위탁 금액 (할인 미적용, 별도 가산)
   const maintenanceAmt = input.maintenanceContractAmount || 0;
-  const combinedSupplyCost = output.supplyCost + maintenanceAmt;
-  const combinedTaxAmount = Math.round(combinedSupplyCost * 0.1);
-  const combinedYearTotal = combinedSupplyCost + combinedTaxAmount;
-  const combinedMonthlyTotal = Math.floor(combinedYearTotal / 12 / 10000) * 10000;
+
+  // 월 청구액(VAT별도)을 만원 단위로 절사한 뒤, 절사된 금액 기준으로 부가세(10%)를 산정한다.
+  // 절사로 줄어든 차액은 '특별 협의 조정액'이 흡수하여 표의 모든 행이 정확히 합산된다.
+  const combinedSupplyRaw = output.supplyCost + maintenanceAmt; // 정확 공급가 합계(VAT별도)
+  const monthlySupply = Math.floor(combinedSupplyRaw / 12 / 10000) * 10000; // 월 공급가(VAT별도, 만원절사)
+  const combinedSupplyCost = monthlySupply * 12; // 연 공급가(VAT별도, 절사 반영)
+  const combinedTaxAmount = Math.round(combinedSupplyCost * 0.1); // 부가세(절사금액 기준 10%)
+  const combinedYearTotal = combinedSupplyCost + combinedTaxAmount; // 연 총 청구액(VAT포함)
+  const finalSupplyCost = combinedSupplyCost - maintenanceAmt; // 점검 최종 공급가(절사 반영)
+  const discountApplied = output.calcTotal - finalSupplyCost; // 특별 협의 조정액(절사분 흡수)
 
   // 서비스 번호 매기기 로직
   let svcCount = 1;
@@ -100,15 +106,15 @@ export default function QuoteA4Document({ input, output }: Props) {
 
         <div className={styles.totalSummary}>
           <div className={styles.totalRow}>
-            <span>월 청구 금액 (VAT 포함)</span>
+            <span>월 청구 금액 (VAT 별도)</span>
             <div>
-              <span className={styles.priceMonth}>₩ {fmt(maintenanceAmt > 0 ? combinedMonthlyTotal : output.monthlyTotal)}</span>
+              <span className={styles.priceMonth}>₩ {fmt(monthlySupply)}</span>
             </div>
           </div>
           <div className={styles.totalSummaryBottom}>
             <span className={styles.monthlyTagInline}>12개월 분납형 (월 단위 청구)</span>
             <span className={styles.priceYear}>
-              연간 총 견적 합계 (VAT 포함) : ₩ {fmt(maintenanceAmt > 0 ? combinedYearTotal : output.yearTotal)}
+              연간 총 견적 합계 (VAT 별도) : ₩ {fmt(combinedSupplyCost)}
             </span>
           </div>
         </div>
@@ -192,7 +198,7 @@ export default function QuoteA4Document({ input, output }: Props) {
               <td colSpan={2} className={styles.center}>
                 특별 협의 조정액 (-)
               </td>
-              <td className={styles.num}>- {fmt(output.discountApplied)}</td>
+              <td className={styles.num}>- {fmt(discountApplied)}</td>
               <td>J&G 시스템 별도 지원</td>
             </tr>
             <tr>
@@ -200,7 +206,7 @@ export default function QuoteA4Document({ input, output }: Props) {
                 최종 공급가액
               </td>
               <td className={styles.num} style={{ fontWeight: 700 }}>
-                {fmt(output.supplyCost)}
+                {fmt(finalSupplyCost)}
               </td>
               <td></td>
             </tr>

@@ -41,10 +41,14 @@ function QuotePageContent() {
   // 엑셀(CSV) 다운로드 핸들러
   const handleExcelDownload = () => {
     const maintenanceAmt = input.maintenanceContractAmount || 0;
-    const combinedSupplyCost = output.supplyCost + maintenanceAmt;
+    // 월 청구액(VAT별도) 만원 절사 → 절사금액 기준 부가세 산정, 절사분은 조정액이 흡수
+    const combinedSupplyRaw = output.supplyCost + maintenanceAmt;
+    const monthlySupply = Math.floor(combinedSupplyRaw / 12 / 10000) * 10000;
+    const combinedSupplyCost = monthlySupply * 12;
     const combinedTaxAmount = Math.round(combinedSupplyCost * 0.1);
     const combinedYearTotal = combinedSupplyCost + combinedTaxAmount;
-    const combinedMonthlyTotal = Math.floor(combinedYearTotal / 12 / 10000) * 10000;
+    const finalSupplyCost = combinedSupplyCost - maintenanceAmt;
+    const discountApplied = output.calcTotal - finalSupplyCost;
 
     const fmt = (n: number) => Math.max(0, Math.round(n)).toLocaleString('ko-KR');
     const today = new Date().toLocaleDateString('ko-KR');
@@ -66,14 +70,14 @@ function QuotePageContent() {
       ['제경비', fmt(output.overheadCost), '직접인건비의 110%'],
       ['기술료', fmt(output.techCost), '(인건비+제경비)의 20%'],
       ['KICA 기준 산출 공급가액 합계', fmt(output.calcTotal), ''],
-      ['특별 협의 조정액 (-)', `-${fmt(output.discountApplied)}`, 'J&G 시스템 별도 지원'],
-      ['최종 공급가액', fmt(output.supplyCost), ''],
+      ['특별 협의 조정액 (-)', `-${fmt(discountApplied)}`, 'J&G 시스템 별도 지원'],
+      ['최종 공급가액', fmt(finalSupplyCost), ''],
       ['정보통신설비의 유지보수·관리자 위탁 선임료', fmt(maintenanceAmt), '비상주 (할인 미적용)'],
       ['부가가치세', fmt(combinedTaxAmount), '10%'],
       ['연간 총 청구액계 (VAT포함)', fmt(combinedYearTotal), ''],
       [],
       ['▶ 월 청구 금액'],
-      ['월 청구액 (VAT포함)', fmt(maintenanceAmt > 0 ? combinedMonthlyTotal : output.monthlyTotal), '12개월 분납형'],
+      ['월 청구액 (VAT별도)', fmt(monthlySupply), '12개월 분납형'],
       [],
       ['▶ 영업 담당'],
       ['영업 담당자', input.salesName],
