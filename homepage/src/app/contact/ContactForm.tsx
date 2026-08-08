@@ -197,7 +197,7 @@ async function sendDetailFormEmailFallback(form: DetailForm): Promise<boolean> {
 
   const payload = {
     subject: `[견적서신청] ${form.buildingName || form.name} — 정보통신설비 성능점검`,
-    from_name: "제이앤지시스템 홈페이지",
+    from_name: "정보통신설비점검문의 (inspec.jngsystem.co.kr)",
     "신청유형": "견적서 바로 신청",
     name: form.name,
     "연락처": form.phone,
@@ -231,7 +231,7 @@ async function sendBasicFormEmailFallback(form: BasicForm): Promise<boolean> {
 
   const payload = {
     subject: `[상담신청] ${form.company} — 정보통신설비 성능점검`,
-    from_name: "제이앤지시스템 홈페이지",
+    from_name: "정보통신설비점검문의 (inspec.jngsystem.co.kr)",
     "신청유형": "상담신청",
     name: form.name,
     "회사·건물명": form.company,

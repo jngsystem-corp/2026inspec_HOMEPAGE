@@ -225,7 +225,7 @@ export async function onRequestPost(context: PagesContext): Promise<Response> {
 
   const emailPayload: Record<string, unknown> = {
     subject: `[${inquiryTypeLabel}] ${buildingName || companyName || customerName}`,
-    from_name: "제이앤지시스템 홈페이지",
+    from_name: "정보통신설비점검문의 (inspec.jngsystem.co.kr)",
     "신청유형": inquiryTypeLabel,
     "담당자명": customerName,
     "연락처": customerPhone,
