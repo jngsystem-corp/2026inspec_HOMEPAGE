@@ -231,7 +231,7 @@ export default function ServicePage() {
                     <div className="flex-1">
                       <div className="flex flex-wrap items-center gap-2 mb-2">
                         <h3 className="text-xl font-bold" style={{ color: "var(--color-primary)" }}>{title}</h3>
-                        <span className="text-xs font-bold px-2.5 py-1 rounded-full font-inter" style={{ background: color + "15", color }}>
+                        <span className="text-xs font-bold px-2.5 py-1 rounded-full" style={{ background: color + "15", color }}>
                           {subtitle}
                         </span>
                       </div>

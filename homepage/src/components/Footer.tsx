@@ -77,7 +77,7 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-white/40">
           <p>© {new Date().getFullYear()} 제이앤지시스템 | JNGSYSTEM. All rights reserved.</p>
-          <div className="flex items-center gap-4 font-inter">
+          <div className="flex items-center gap-4">
             <p>사업자등록번호: 211-88-14679 | 과기정통부 정보통신공사업 등록</p>
             <Link href="/privacy" className="hover:text-white/70 transition-colors underline underline-offset-2">
               개인정보 취급방침

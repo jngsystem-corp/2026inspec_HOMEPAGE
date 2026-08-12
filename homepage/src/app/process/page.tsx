@@ -176,12 +176,12 @@ export default function ProcessPage() {
               <div key={no} className="bg-white rounded-2xl border border-[var(--color-border)] card-shadow overflow-hidden">
                 <div className="flex flex-col sm:flex-row">
                   <div className="sm:w-20 flex sm:flex-col items-center justify-center gap-2 p-5 sm:py-8" style={{ background: color + "10" }}>
-                    <span className="text-3xl font-bold font-inter" style={{ color }}>{no}</span>
+                    <span className="text-3xl font-bold" style={{ color }}>{no}</span>
                   </div>
                   <div className="flex-1 p-6">
                     <div className="flex flex-wrap items-center gap-3 mb-2">
                       <h2 className="text-lg font-bold" style={{ color: "var(--color-primary)" }}>{title}</h2>
-                      <span className="text-xs font-bold px-2.5 py-1 rounded-full font-inter" style={{ background: color + "15", color }}>
+                      <span className="text-xs font-bold px-2.5 py-1 rounded-full" style={{ background: color + "15", color }}>
                         소요 {duration}
                       </span>
                     </div>

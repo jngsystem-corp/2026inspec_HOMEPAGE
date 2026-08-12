@@ -194,7 +194,7 @@ export default function LawPage() {
               { label: "점검기록 보존", value: "5년", sub: "성능점검표 기준", color: "#7C3AED" },
             ].map(({ label, value, sub, color }) => (
               <div key={label} className="bg-white rounded-2xl p-5 border border-[var(--color-border)] card-shadow text-center">
-                <div className="text-2xl font-bold font-inter mb-1" style={{ color }}>{value}</div>
+                <div className="text-2xl font-bold mb-1" style={{ color }}>{value}</div>
                 <div className="text-sm font-semibold mb-0.5" style={{ color: "var(--color-primary)" }}>{label}</div>
                 <div className="text-xs" style={{ color: "var(--color-gray-600)" }}>{sub}</div>
               </div>
@@ -459,7 +459,7 @@ export default function LawPage() {
                 {penalties.map(({ violation, amount, law }) => (
                   <tr key={violation} className="hover:bg-[var(--color-bg)]">
                     <td className="px-6 py-4" style={{ color: "var(--color-gray-600)" }}>{violation}</td>
-                    <td className="px-6 py-4 font-bold font-inter" style={{ color: "var(--color-warning)" }}>{amount}</td>
+                    <td className="px-6 py-4 font-bold" style={{ color: "var(--color-warning)" }}>{amount}</td>
                     <td className="px-6 py-4 text-xs" style={{ color: "var(--color-gray-600)" }}>{law}</td>
                   </tr>
                 ))}
@@ -520,7 +520,7 @@ export default function LawPage() {
                 ].map(({ range, deadline, note, urgent }) => (
                   <tr key={range} style={{ background: urgent ? "#fff8f5" : "white" }} className="hover:brightness-[0.98]">
                     <td className="px-6 py-4 font-medium" style={{ color: urgent ? "var(--color-warning)" : "var(--color-primary)" }}>{range}</td>
-                    <td className="px-6 py-4 font-bold font-inter" style={{ color: urgent ? "var(--color-warning)" : "var(--color-gray-900)" }}>{deadline}</td>
+                    <td className="px-6 py-4 font-bold" style={{ color: urgent ? "var(--color-warning)" : "var(--color-gray-900)" }}>{deadline}</td>
                     <td className="px-6 py-4 text-xs" style={{ color: "var(--color-gray-600)" }}>{note}</td>
                   </tr>
                 ))}

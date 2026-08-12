@@ -292,7 +292,7 @@ export default function HomePage() {
           <HeroDiagnosis />
 
           <div className="mb-8">
-            <p className="text-white/50 text-sm mb-3 font-inter">연면적 1만~3만㎡ 의무 이행까지 남은 시간</p>
+            <p className="text-white/50 text-sm mb-3">연면적 1만~3만㎡ 의무 이행까지 남은 시간</p>
             <Countdown />
             <p className="mt-3 text-xs font-bold" style={{ color: "#FF9B6B" }}>
               ⚠ 미이행 시 최대 300만원 과태료 — 위반 항목 중복 시 합산 부과
@@ -321,7 +321,7 @@ export default function HomePage() {
               { value: "300만원", label: "미이행 시 최대 과태료" },
             ].map(({ value, label }) => (
               <div key={label}>
-                <div className="text-xl sm:text-2xl font-bold font-inter text-white">{value}</div>
+                <div className="text-xl sm:text-2xl font-bold text-white">{value}</div>
                 <div className="text-xs text-white/60 mt-0.5">{label}</div>
               </div>
             ))}
@@ -360,7 +360,7 @@ export default function HomePage() {
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ background: color + "18" }}>
                   <Icon size={24} style={{ color }} />
                 </div>
-                <div className="inline-block text-xs font-bold px-2.5 py-0.5 rounded-full mb-2 font-inter" style={{ background: color + "15", color }}>
+                <div className="inline-block text-xs font-bold px-2.5 py-0.5 rounded-full mb-2" style={{ background: color + "15", color }}>
                   {period}
                 </div>
                 <h3 className="text-base font-bold mb-2" style={{ color: "var(--color-primary)" }}>{title}</h3>
@@ -415,7 +415,7 @@ export default function HomePage() {
               </h3>
               {differentiators.map(({ no, title, desc }) => (
                 <div key={no} className="flex gap-4 bg-white rounded-2xl p-5 border border-[var(--color-border)] card-shadow">
-                  <div className="text-2xl font-bold font-inter shrink-0 leading-none pt-0.5" style={{ color: "var(--color-accent-light)" }}>
+                  <div className="text-2xl font-bold shrink-0 leading-none pt-0.5" style={{ color: "var(--color-accent-light)" }}>
                     {no}
                   </div>
                   <div>
@@ -463,7 +463,7 @@ export default function HomePage() {
                     <td className="px-6 py-4 font-medium" style={{ color: status === "urgent" ? "var(--color-warning)" : "var(--color-primary)" }}>
                       {range}
                     </td>
-                    <td className="px-6 py-4 font-bold font-inter" style={{ color: status === "urgent" ? "var(--color-warning)" : "var(--color-gray-900)" }}>
+                    <td className="px-6 py-4 font-bold" style={{ color: status === "urgent" ? "var(--color-warning)" : "var(--color-gray-900)" }}>
                       {deadline}
                     </td>
                     <td className="px-6 py-4 text-xs" style={{ color: "var(--color-gray-600)" }}>
@@ -527,7 +527,7 @@ export default function HomePage() {
                     {penalties.map(({ desc, amount }) => (
                       <tr key={desc} className="hover:bg-orange-50">
                         <td className="px-5 py-3.5" style={{ color: "var(--color-gray-600)" }}>{desc}</td>
-                        <td className="px-5 py-3.5 text-right font-bold font-inter whitespace-nowrap" style={{ color: "var(--color-warning)" }}>{amount}</td>
+                        <td className="px-5 py-3.5 text-right font-bold whitespace-nowrap" style={{ color: "var(--color-warning)" }}>{amount}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -589,7 +589,7 @@ export default function HomePage() {
               { no: "05", title: "위탁 계약 범위 명확화", desc: "유지보수·관리 위탁 범위가 계약서에 명시되어야 선임 간주 인정" },
             ].map(({ no, title, desc }) => (
               <div key={no} className="bg-white rounded-2xl p-5 border border-[var(--color-border)] card-shadow">
-                <div className="text-2xl font-bold font-inter mb-2" style={{ color: "var(--color-accent-light)" }}>{no}</div>
+                <div className="text-2xl font-bold mb-2" style={{ color: "var(--color-accent-light)" }}>{no}</div>
                 <h3 className="text-sm font-bold mb-1.5" style={{ color: "var(--color-primary)" }}>{title}</h3>
                 <p className="text-xs leading-relaxed" style={{ color: "var(--color-gray-600)" }}>{desc}</p>
               </div>

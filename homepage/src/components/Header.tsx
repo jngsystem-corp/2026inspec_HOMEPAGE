@@ -69,7 +69,7 @@ export default function Header() {
               title="클릭하면 번호가 복사됩니다"
             >
               <Phone size={15} />
-              <span className="font-inter">02-3444-3570</span>
+              <span>02-3444-3570</span>
               {copied && (
                 <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-[var(--color-primary)] text-white text-xs px-2 py-1 rounded whitespace-nowrap">
                   복사됨!

@@ -158,7 +158,7 @@ export default function PrivacyPage() {
                     </tr>
                     <tr className="border-b border-[var(--color-border)]">
                       <td className="py-2.5 pr-4 font-semibold" style={{ color: "var(--color-primary)" }}>전화</td>
-                      <td className="py-2.5 font-inter">02-3444-3570</td>
+                      <td className="py-2.5">02-3444-3570</td>
                     </tr>
                     <tr>
                       <td className="py-2.5 pr-4 font-semibold" style={{ color: "var(--color-primary)" }}>이메일</td>

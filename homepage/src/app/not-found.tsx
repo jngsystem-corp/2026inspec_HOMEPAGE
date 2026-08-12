@@ -12,7 +12,7 @@ export default function NotFound() {
         <div className="container-main py-20 text-center">
           {/* 404 숫자 */}
           <div
-            className="text-8xl sm:text-9xl font-black font-inter mb-4 leading-none"
+            className="text-8xl sm:text-9xl font-black mb-4 leading-none"
             style={{ color: "var(--color-accent-light)" }}
           >
             404

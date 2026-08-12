@@ -30,7 +30,7 @@ export default function ContactCards() {
           <div className="flex-1 min-w-0">
             <p className="text-xs font-medium mb-0.5" style={{ color: "var(--color-gray-600)" }}>{label}</p>
             {href ? (
-              <a href={href} className="text-sm font-semibold font-inter hover:underline" style={{ color: "var(--color-primary)" }}>{value}</a>
+              <a href={href} className="text-sm font-semibold hover:underline" style={{ color: "var(--color-primary)" }}>{value}</a>
             ) : (
               <p className="text-sm font-semibold" style={{ color: "var(--color-primary)" }}>{value}</p>
             )}

@@ -67,7 +67,7 @@ export default function HeroDiagnosis() {
 
   return (
     <div className="mb-8">
-      <p className="text-white/60 text-xs font-bold mb-3 tracking-wide font-inter">
+      <p className="text-white/60 text-xs font-bold mb-3 tracking-wide">
         우리 건물 연면적을 선택하면 의무 기한을 즉시 확인할 수 있습니다
       </p>
       <div className="flex flex-wrap gap-2 mb-3">
@@ -106,7 +106,7 @@ export default function HeroDiagnosis() {
             )}
             <span className="font-bold text-white text-sm">{opt.range}</span>
             <span
-              className="text-xs px-2 py-0.5 rounded-full font-bold font-inter"
+              className="text-xs px-2 py-0.5 rounded-full font-bold"
               style={{ background: borderColor[opt.status], color: 'white' }}
             >
               {opt.badge}
@@ -116,7 +116,7 @@ export default function HeroDiagnosis() {
           {opt.status !== 'exempt' && (
             <p className="text-white/90 text-sm mb-1">
               의무 이행 기한:{' '}
-              <strong className="text-white font-inter">{opt.deadline}</strong>
+              <strong className="text-white">{opt.deadline}</strong>
               {opt.status === 'urgent' && (
                 <span className="ml-2 text-xs font-bold" style={{ color: '#FF9B6B' }}>
                   ⚠ 미이행 시 최대 300만원 과태료

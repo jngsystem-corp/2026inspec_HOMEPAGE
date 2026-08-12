@@ -193,7 +193,7 @@ export default function TargetPage() {
                         {range}
                       </span>
                     </td>
-                    <td className="px-6 py-4 font-bold font-inter" style={{ color: status === "urgent" ? "var(--color-warning)" : "var(--color-gray-900)" }}>
+                    <td className="px-6 py-4 font-bold" style={{ color: status === "urgent" ? "var(--color-warning)" : "var(--color-gray-900)" }}>
                       {deadline}
                     </td>
                     <td className="px-6 py-4 text-xs" style={{ color: "var(--color-gray-600)" }}>

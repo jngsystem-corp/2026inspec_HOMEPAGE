@@ -165,7 +165,7 @@ export default function EquipmentPage() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
             {categories.map(({ name, count, color }) => (
               <div key={name} className="bg-white rounded-xl p-4 text-center border border-[var(--color-border)] card-shadow">
-                <div className="text-2xl font-bold font-inter mb-1" style={{ color }}>{count}개</div>
+                <div className="text-2xl font-bold mb-1" style={{ color }}>{count}개</div>
                 <div className="text-sm font-medium" style={{ color: "var(--color-primary)" }}>{name}</div>
               </div>
             ))}
@@ -178,7 +178,7 @@ export default function EquipmentPage() {
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-1.5 h-6 rounded-full" style={{ background: color }} />
                   <h2 className="text-xl font-bold" style={{ color: "var(--color-primary)" }}>{name}</h2>
-                  <span className="text-sm font-inter font-bold px-2.5 py-0.5 rounded-full" style={{ background: color + "15", color }}>
+                  <span className="text-sm font-bold px-2.5 py-0.5 rounded-full" style={{ background: color + "15", color }}>
                     {count}개
                   </span>
                 </div>
@@ -194,7 +194,7 @@ export default function EquipmentPage() {
                     <tbody className="divide-y divide-[var(--color-border)]">
                       {items.map(({ no, name: itemName, desc }) => (
                         <tr key={no} className="hover:bg-[var(--color-bg)]">
-                          <td className="px-5 py-3 font-inter font-bold text-center" style={{ color }}>{no}</td>
+                          <td className="px-5 py-3 font-bold text-center" style={{ color }}>{no}</td>
                           <td className="px-5 py-3 font-semibold" style={{ color: "var(--color-primary)" }}>{itemName}</td>
                           <td className="px-5 py-3" style={{ color: "var(--color-gray-600)" }}>{desc}</td>
                         </tr>

@@ -414,7 +414,7 @@ function BasicContactForm() {
             type="tel" required placeholder="010-0000-0000"
             value={form.phone}
             onChange={(e) => setForm({ ...form, phone: e.target.value })}
-            className={`${inputClass} font-inter`} style={focusStyle}
+            className={`${inputClass}`} style={focusStyle}
           />
         </div>
         <div>
@@ -423,7 +423,7 @@ function BasicContactForm() {
             type="email" placeholder="email@example.com"
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
-            className={`${inputClass} font-inter`} style={focusStyle}
+            className={`${inputClass}`} style={focusStyle}
           />
         </div>
       </div>
@@ -669,7 +669,7 @@ function DetailContactForm() {
             type="tel" required placeholder="010-0000-0000"
             value={form.phone}
             onChange={(e) => setForm({ ...form, phone: e.target.value })}
-            className={`${inputClass} font-inter`} style={focusStyle}
+            className={`${inputClass}`} style={focusStyle}
           />
         </div>
       </div>
@@ -680,7 +680,7 @@ function DetailContactForm() {
           type="email" placeholder="email@example.com"
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
-          className={`${inputClass} font-inter`} style={focusStyle}
+          className={`${inputClass}`} style={focusStyle}
         />
       </div>
 

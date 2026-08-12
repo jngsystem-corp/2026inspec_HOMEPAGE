@@ -2,7 +2,8 @@
   background-color: #cbd5e1;
   min-height: 100vh;
   padding: 40px 20px;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont,
+    'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
 }
 
 .splitWrapper {
