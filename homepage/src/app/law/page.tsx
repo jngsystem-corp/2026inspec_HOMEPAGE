@@ -397,6 +397,7 @@ export default function LawPage() {
           <p className="mb-5 text-sm" style={{ color: "var(--color-gray-600)" }}>
             정보통신공사업법 시행규칙 제9조 및 별표에 따라 건축물 규모별로 선임해야 하는 기술자 등급이 다릅니다.
             공사업자에게 위탁하면 해당 기준을 갖춘 기술자를 보유한 업체가 선임 간주를 처리합니다.
+            <Link href="/manager-appointment" className="ml-2 underline font-bold" style={{ color: "var(--color-accent)" }}>관리자 선임 절차 자세히 보기 →</Link>
           </p>
           <div className="overflow-x-auto mb-6">
             <table className="w-full bg-white rounded-2xl border border-[var(--color-border)] card-shadow text-sm overflow-hidden">

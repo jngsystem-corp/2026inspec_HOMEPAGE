@@ -340,6 +340,7 @@ export default function ServicePage() {
           <p className="mb-5 text-sm" style={{ color: "var(--color-gray-600)" }}>
             정보통신공사업법 시행규칙 제9조 및 별표에 따라 건축물 규모별로 선임 기술자 등급이 다릅니다.
             공사업자에게 위탁 시, 해당 등급 기술자를 보유한 업체와 계약하면 선임 간주 요건을 충족합니다.
+            <Link href="/manager-appointment" className="ml-2 underline font-bold" style={{ color: "var(--color-accent)" }}>관리자 선임 절차 자세히 보기 →</Link>
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             {[

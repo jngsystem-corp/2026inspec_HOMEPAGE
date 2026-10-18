@@ -58,6 +58,7 @@ export default function Footer() {
               <li><Link href="/target" className="hover:text-white transition-colors">대상건축물 확인</Link></li>
               <li><Link href="/process" className="hover:text-white transition-colors">점검 절차</Link></li>
               <li><Link href="/law" className="hover:text-white transition-colors">법령 안내</Link></li>
+              <li><Link href="/manager-appointment" className="hover:text-white transition-colors">관리자 선임 안내</Link></li>
               <li><Link href="/faq" className="hover:text-white transition-colors">자주 묻는 질문</Link></li>
             </ul>
           </div>
