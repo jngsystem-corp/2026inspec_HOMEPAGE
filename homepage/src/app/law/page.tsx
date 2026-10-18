@@ -40,7 +40,7 @@ const faqSchema = {
       name: "정보통신설비 성능점검 의무화 법적 근거는 무엇인가요?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "정보통신공사업법 제37조의2에 따라 연면적 5,000㎡ 이상 건축물의 관리주체는 정보통신설비를 반기별 1회 이상 유지보수·관리하고, 매년 1회 이상 성능점검을 실시해야 합니다. 2024년 7월 19일 시행되었습니다.",
+        text: "정보통신공사업법 제37조의2~4에 따라 연면적 5,000㎡ 이상 건축물의 관리주체는 정보통신설비를 반기별 1회 이상 유지보수·관리하고, 매년 1회 이상 성능점검을 실시해야 합니다. 2024년 7월 19일 시행되었습니다.",
       },
     },
     {
@@ -64,18 +64,20 @@ const faqSchema = {
       name: "성능점검 대행은 어떤 업체가 할 수 있나요?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "과학기술정보통신부에 등록된 정보통신공사업자 또는 정보통신용역업자만 성능점검을 대행할 수 있습니다. (정보통신공사업법 시행규칙 제8조~제11조)",
+        text: "등록된 정보통신공사업자 또는 정보통신용역업자만 성능점검을 대행할 수 있습니다. (정보통신공사업법 시행규칙 제8조~제11조)",
       },
     },
   ],
 };
 
 const laws = [
-  { name: "정보통신공사업법 제37조의2", desc: "유지보수·관리 의무 — 반기별 1회 이상, 관리자 선임 기준, 위탁 가능" },
-  { name: "정보통신공사업법 제37조의3", desc: "성능점검 의무 — 매년 1회 이상, 성능점검표 5년 보존, 지자체 제출" },
-  { name: "정보통신공사업법 제37조의4", desc: "과태료 부과 기준 (최대 300만원)" },
+  { name: "정보통신공사업법 제37조의2", desc: "정보통신설비 유지보수·관리기준 — 과기정통부장관이 정하여 고시" },
+  { name: "정보통신공사업법 제37조의3", desc: "관리기준 준수·성능점검 의무 — 매년 1회 이상, 성능점검 기록 작성·5년 보존·지자체 제출" },
+  { name: "정보통신공사업법 제37조의4", desc: "유지보수 등의 공사업자 위탁, 유지보수·관리자 선임·신고·재선임" },
+  { name: "정보통신공사업법 제78조", desc: "과태료 (세부 금액: 시행령 제58조·별표 10, 최대 300만원)" },
   { name: "정보통신공사업법 시행령 제37조의2", desc: "대상 건축물 범위, 연면적 기준" },
-  { name: "정보통신공사업법 시행령 제37조의4", desc: "관리자 선임 자격 기준 (연면적 규모별 기술자 등급)" },
+  { name: "정보통신공사업법 시행령 제37조의3", desc: "유지보수·관리자 자격 기준 (인정교육 이수 + 기술계 정보통신기술자)" },
+  { name: "정보통신공사업법 시행규칙 제9조·별표", desc: "연면적 규모별 유지보수·관리자 선임 기준 (기술자 등급)" },
   { name: "정보통신공사업법 시행규칙 제8조~제11조", desc: "성능점검 대행자 요건, 점검 절차, 점검표 양식" },
   { name: "정보통신설비 유지보수·관리기준 (고시)", desc: "구체적 점검 항목, 방법, 기준 — 과기정통부 고시" },
 ];
@@ -137,11 +139,13 @@ const selectionRows = [
 ];
 
 const penalties = [
-  { violation: "유지보수·관리기준을 준수하지 아니한 경우", amount: "300만원", law: "법 제37조의4" },
-  { violation: "점검기록을 작성하지 아니하거나 거짓으로 작성한 경우", amount: "300만원", law: "법 제37조의4" },
-  { violation: "점검기록(5년)을 보존하지 아니한 경우", amount: "150만원", law: "법 제37조의4" },
-  { violation: "유지보수·관리자 선임 신고를 하지 아니한 경우 (30일 이내 신고 불이행)", amount: "100만원", law: "법 제37조의4" },
-  { violation: "지자체 요청 시 점검기록을 제출하지 아니한 경우", amount: "100만원", law: "법 제37조의4" },
+  { violation: "유지보수·관리기준을 준수하지 아니한 경우", amount: "300만원", law: "법 제78조" },
+  { violation: "점검기록을 작성하지 아니하거나 거짓으로 작성한 경우", amount: "300만원", law: "법 제78조" },
+  { violation: "점검기록(5년)을 보존하지 아니한 경우", amount: "150만원", law: "법 제78조" },
+  { violation: "유지보수·관리자 선임 신고를 하지 아니한 경우 (30일 이내 신고 불이행)", amount: "100만원", law: "법 제78조" },
+  { violation: "지자체 요청 시 점검기록을 제출하지 아니한 경우", amount: "100만원", law: "법 제78조" },
+  { violation: "유지보수·관리자를 선임하지 아니한 경우", amount: "300만원", law: "법 제78조" },
+  { violation: "관리자 해임 후 30일 이내에 재선임하지 아니한 경우", amount: "300만원", law: "법 제78조" },
 ];
 
 export default function LawPage() {
@@ -171,7 +175,7 @@ export default function LawPage() {
           <p className="text-white/60 text-sm mb-2">법령 안내</p>
           <h1 className="text-white text-3xl sm:text-4xl font-bold mb-4">관련 법령 및 의무사항</h1>
           <p className="text-white/80 max-w-xl leading-relaxed">
-            정보통신공사업법 제37조의2에 따른 유지보수·관리(반기별 1회 이상)와 성능점검(매년 1회 이상) 의무를 상세히 안내합니다.
+            정보통신공사업법 제37조의2~4에 따른 유지보수·관리(반기별 1회 이상)와 성능점검(매년 1회 이상) 의무를 상세히 안내합니다.
           </p>
         </div>
       </section>
@@ -391,7 +395,7 @@ export default function LawPage() {
             정보통신설비 유지보수 관리자 선임 자격 기준
           </h2>
           <p className="mb-5 text-sm" style={{ color: "var(--color-gray-600)" }}>
-            정보통신공사업법 시행령 제37조의4에 따라 건축물 규모별로 선임해야 하는 기술자 등급이 다릅니다.
+            정보통신공사업법 시행규칙 제9조 및 별표에 따라 건축물 규모별로 선임해야 하는 기술자 등급이 다릅니다.
             공사업자에게 위탁하면 해당 기준을 갖춘 기술자를 보유한 업체가 선임 간주를 처리합니다.
           </p>
           <div className="overflow-x-auto mb-6">
@@ -476,7 +480,7 @@ export default function LawPage() {
             <div className="flex-1 min-w-[220px]">
               <p className="font-bold mb-1" style={{ color: "var(--color-primary)" }}>📌 법령 출처</p>
               <ul className="space-y-0.5" style={{ color: "var(--color-gray-600)" }}>
-                <li>· 정보통신공사업법 제37조의4 (시행: 2024.7.19.)</li>
+                <li>· 정보통신공사업법 제37조의2~제37조의4 (시행: 2024.7.19.)</li>
                 <li>· 과기정통부 고시 「정보통신설비 유지보수·관리기준」</li>
               </ul>
             </div>
@@ -514,9 +518,9 @@ export default function LawPage() {
               </thead>
               <tbody className="divide-y divide-[var(--color-border)]">
                 {[
-                  { range: "연면적 3만㎡ 이상", deadline: "2025. 7. 18.", note: "유지보수·관리(반기 1회) + 성능점검(연 1회) + 기록보존 5년", urgent: true },
-                  { range: "연면적 1만㎡ 이상 ~ 3만㎡ 미만", deadline: "2026. 7. 18.", note: "동일 의무 이행 — 올해 마감", urgent: true },
-                  { range: "연면적 5천㎡ 이상 ~ 1만㎡ 미만", deadline: "2027. 7. 18.", note: "동일 의무 이행 — 사전 준비 권장" },
+                  { range: "연면적 3만㎡ 이상", deadline: "2025. 7. 19. 적용", note: "선임 2025.8.18 · 첫 관리점검 2026.1.18 · 첫 성능점검 2026.7.18 (모두 경과 — 정기 점검 지속)", urgent: true },
+                  { range: "연면적 1만㎡ 이상 ~ 3만㎡ 미만", deadline: "2026. 7. 19. 적용", note: "선임 2026.8.18 · 첫 관리점검 2027.1.18 · 첫 성능점검 2027.7.18", urgent: true },
+                  { range: "연면적 5천㎡ 이상 ~ 1만㎡ 미만", deadline: "2027. 7. 19. 적용", note: "선임 2027.8.18 · 첫 관리점검 2028.1.18 · 첫 성능점검 2028.7.18" },
                 ].map(({ range, deadline, note, urgent }) => (
                   <tr key={range} style={{ background: urgent ? "#fff8f5" : "white" }} className="hover:brightness-[0.98]">
                     <td className="px-6 py-4 font-medium" style={{ color: urgent ? "var(--color-warning)" : "var(--color-primary)" }}>{range}</td>
@@ -531,11 +535,11 @@ export default function LawPage() {
             <AlertTriangle size={20} style={{ color: "var(--color-warning)" }} className="shrink-0 mt-0.5" />
             <div>
               <p className="text-sm font-bold mb-1" style={{ color: "var(--color-warning)" }}>
-                🚨 연면적 3만㎡ 이상 대형 건축물 — 올해 7월 18일까지 최초 성능점검 완료 필수
+                🚨 연면적 1만~3만㎡ 건축물 — 2026년 7월 19일부터 의무 적용
               </p>
               <p className="text-sm" style={{ color: "var(--color-gray-600)" }}>
-                2025년 7월 18일부터 제도가 시행된 3만㎡ 이상 건축물은 <strong>법령상 &apos;매년 1회 이상&apos; 성능점검</strong> 의무에 따라
-                <strong> 2026년 7월 18일까지 최초 성능점검을 완료</strong>해야 합니다.
+                관리자 선임(또는 위탁) 기한 2026.8.18은 이미 지났습니다 — 아직이라면 즉시 선임하고, <strong>2027.1.18까지 첫 유지보수·관리 점검</strong>,
+                <strong>2027.7.18까지 첫 성능점검</strong>을 해야 합니다. 선임 신고는 선임일부터 30일 이내입니다.
                 점검 일정 확보가 늦어질수록 성수기 대기 시간이 길어질 수 있으니 지금 바로 상담하세요.
               </p>
             </div>

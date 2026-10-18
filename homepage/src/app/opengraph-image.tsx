@@ -105,7 +105,7 @@ export default async function OgImage() {
               }}
             >
               <span style={{ color: "#60B0FF", fontSize: 15, fontWeight: 700 }}>
-                과기정통부 등록 정보통신공사업자
+                등록 정보통신공사업자
               </span>
             </div>
           </div>

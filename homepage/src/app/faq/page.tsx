@@ -5,12 +5,14 @@ import { ArrowRight } from "lucide-react";
 import PageLayout from "@/components/PageLayout";
 import BreadcrumbSchema from "@/components/BreadcrumbSchema";
 import FaqClient from "@/components/FaqClient";
-import { faqCategories } from "@/data/faq-data";
+import { faqCategories, allFaqItems } from "@/data/faq-data";
+
+const FAQ_COUNT = allFaqItems.length;
 
 export const metadata: Metadata = {
-  title: "정보통신설비 성능점검·유지보수 FAQ — 실무 질문 75건",
+  title: `정보통신설비 성능점검·유지보수 FAQ — 실무 질문 ${FAQ_COUNT}건`,
   description:
-    "과학기술정보통신부 정보통신설비 유지보수·관리 제도 질의응답 사례집. 관리주체 판단, 대상건축물, 선임기준, 과태료 등 75개 이상 실무 Q&A.",
+    `과학기술정보통신부 정보통신설비 유지보수·관리 제도 질의응답 사례집. 관리주체 판단, 대상건축물, 선임기준, 과태료 등 ${FAQ_COUNT}개 실무 Q&A.`,
   keywords: [
     "정보통신설비유지보수",
     "정보통신설비성능점검",
@@ -26,14 +28,14 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://inspec.jngsystem.co.kr/faq" },
   openGraph: {
-    title: "정보통신설비 성능점검·유지보수 FAQ — 실무 질문 75건",
-    description: "과학기술정보통신부 정보통신설비 유지보수·관리 제도 질의응답 사례집. 관리주체 판단, 대상건축물, 선임기준, 과태료 등 75개 이상 실무 Q&A.",
+    title: `정보통신설비 성능점검·유지보수 FAQ — 실무 질문 ${FAQ_COUNT}건`,
+    description: `과학기술정보통신부 정보통신설비 유지보수·관리 제도 질의응답 사례집. 관리주체 판단, 대상건축물, 선임기준, 과태료 등 ${FAQ_COUNT}개 실무 Q&A.`,
     url: "https://inspec.jngsystem.co.kr/faq",
   },
   twitter: {
     card: "summary_large_image",
-    title: "정보통신설비 성능점검·유지보수 FAQ 75건 — 과기정통부 Q&A 기반",
-    description: "관리주체 판단, 대상건축물, 선임기준, 과태료 등 실무 질문 75건. 검색으로 바로 찾기.",
+    title: `정보통신설비 성능점검·유지보수 FAQ ${FAQ_COUNT}건 — 과기정통부 Q&A 기반`,
+    description: `관리주체 판단, 대상건축물, 선임기준, 과태료 등 실무 질문 ${FAQ_COUNT}건. 검색으로 바로 찾기.`,
   },
 };
 

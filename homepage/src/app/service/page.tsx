@@ -142,7 +142,7 @@ const services = [
 ];
 
 const comparison = [
-  { item: "법적 근거", inspection: "정보통신공사업법 제37조의3", maintenance: "정보통신공사업법 제37조의2" },
+  { item: "법적 근거", inspection: "정보통신공사업법 제37조의3", maintenance: "정보통신공사업법 제37조의3·제37조의4" },
   { item: "점검 주기", inspection: "매년 1회 이상", maintenance: "반기별 1회 이상 (연 최소 2회)" },
   { item: "실시 주체", inspection: "공사업자·용역업자 대행 가능", maintenance: "선임된 관리자 또는 위탁업체" },
   { item: "위탁 시 효과", inspection: "성능점검 의무 이행 인정", maintenance: "관리자를 선임한 것으로 봄(선임 간주)" },
@@ -177,7 +177,7 @@ export default function ServicePage() {
           <p className="text-white/60 text-sm mb-2">서비스 소개</p>
           <h1 className="text-white text-3xl sm:text-4xl font-bold mb-4">정보통신설비 성능점검 대행 & 유지보수관리 위탁</h1>
           <p className="text-white/80 max-w-2xl leading-relaxed">
-            정보통신공사업법 제37조의2에 따른 법적 의무를 이행할 수 있도록, 22년간 기업 IT 인프라 유지보수 경험을 바탕으로
+            정보통신공사업법 제37조의2~4에 따른 법적 의무를 이행할 수 있도록, 22년간 기업 IT 인프라 유지보수 경험을 바탕으로
             성능점검 대행 및 유지보수·관리 위탁 서비스를 제공합니다.
           </p>
         </div>
@@ -338,7 +338,7 @@ export default function ServicePage() {
             유지보수 관리자 선임 자격, 어떤 기준인가요?
           </h2>
           <p className="mb-5 text-sm" style={{ color: "var(--color-gray-600)" }}>
-            정보통신공사업법 시행령 제37조의4에 따라 건축물 규모별로 선임 기술자 등급이 다릅니다.
+            정보통신공사업법 시행규칙 제9조 및 별표에 따라 건축물 규모별로 선임 기술자 등급이 다릅니다.
             공사업자에게 위탁 시, 해당 등급 기술자를 보유한 업체와 계약하면 선임 간주 요건을 충족합니다.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
@@ -357,7 +357,7 @@ export default function ServicePage() {
           </div>
           <div className="rounded-xl p-4" style={{ background: "var(--color-accent-light)", border: "1px solid var(--color-accent)" }}>
             <p className="text-xs leading-relaxed" style={{ color: "var(--color-primary)" }}>
-              ※ 근거: 정보통신공사업법 시행령 제37조의4. 공사업자 위탁 시 해당 등급 기술자를 보유한 업체와 계약하면 선임 간주 요건이 충족됩니다.
+              ※ 근거: 정보통신공사업법 시행규칙 제9조·별표(선임 기준), 시행령 제37조의3(자격 기준). 위탁 시에는 해당 규모의 선임 등급과 인정교육(20시간 이상) 이수 등 자격요건을 모두 갖춘 기술자가 배치되는지 확인해야 합니다.
               <Link href="/law" className="ml-2 underline font-bold" style={{ color: "var(--color-accent)" }}>법령 안내 보기 →</Link>
             </p>
           </div>

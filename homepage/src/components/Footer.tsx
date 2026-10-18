@@ -33,7 +33,7 @@ export default function Footer() {
             </div>
             <p className="text-xs text-white/50 mb-2 font-medium">운영사 : 주식회사 제이앤지시스템</p>
             <p className="text-sm text-white/70 leading-relaxed">
-              정보통신공사업법 제37조의2에 따른 성능점검 대행 및 유지보수·관리 위탁 전문 업체입니다.
+              정보통신공사업법 제37조의2~4에 따른 성능점검 대행 및 유지보수·관리 위탁 전문 업체입니다.
             </p>
 
             {/* 내부 관리자 전용 진입점 — 눈에 띄지 않게 배치 */}
@@ -78,7 +78,7 @@ export default function Footer() {
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-white/40">
           <p>© {new Date().getFullYear()} 제이앤지시스템 | JNGSYSTEM. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <p>사업자등록번호: 211-88-14679 | 과기정통부 정보통신공사업 등록</p>
+            <p>사업자등록번호: 211-88-14679 | 정보통신공사업 등록</p>
             <Link href="/privacy" className="hover:text-white/70 transition-colors underline underline-offset-2">
               개인정보 취급방침
             </Link>

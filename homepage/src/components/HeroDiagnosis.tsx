@@ -18,26 +18,26 @@ const options: Option[] = [
   {
     label: '3만㎡ 이상',
     range: '연면적 3만㎡ 이상',
-    deadline: '2026. 7. 18.',
+    deadline: '2025. 7. 19.부터 적용 중',
     status: 'urgent',
-    badge: '최초 점검 마감 임박',
-    message: '2025년 7월 시행 후 매년 1회 성능점검 의무에 따라 2026년 7월 18일까지 최초 점검을 완료해야 합니다.',
+    badge: '의무 적용 중',
+    message: '반기 1회 유지보수·관리 점검과 매년 1회 성능점검을 계속 이행해야 합니다. 과태료 계도기간(2026.7.18)도 이미 끝났습니다.',
   },
   {
     label: '1만㎡ ~ 3만㎡',
     range: '연면적 1만㎡ 이상 ~ 3만㎡ 미만',
-    deadline: '2026. 7. 18.',
+    deadline: '첫 관리점검 2027. 1. 18.',
     status: 'urgent',
-    badge: '올해 마감',
-    message: '2026년 7월 18일부터 유지보수·관리 및 성능점검 의무가 시작됩니다. 지금 일정을 잡으세요.',
+    badge: '의무 적용 중',
+    message: '2026년 7월 19일부터 의무가 적용됐습니다. 관리자 선임(또는 위탁) 기한 2026.8.18은 이미 지났습니다 — 아직이라면 즉시 선임하고, 2027.1.18까지 첫 유지보수·관리 점검, 2027.7.18까지 첫 성능점검을 해야 합니다.',
   },
   {
     label: '5천㎡ ~ 1만㎡',
     range: '연면적 5천㎡ 이상 ~ 1만㎡ 미만',
-    deadline: '2027. 7. 18.',
+    deadline: '2027. 7. 19. 적용',
     status: 'upcoming',
     badge: '준비 필요',
-    message: '2027년 7월 18일 의무화 예정입니다. 미리 준비하면 비용과 행정 절차를 절약할 수 있습니다.',
+    message: '2027년 7월 19일부터 의무가 적용됩니다(2027.8.18까지 관리자 선임). 미리 준비하면 비용과 행정 절차를 절약할 수 있습니다.',
   },
   {
     label: '5천㎡ 미만 / 공동주택',
@@ -115,7 +115,7 @@ export default function HeroDiagnosis() {
 
           {opt.status !== 'exempt' && (
             <p className="text-white/90 text-sm mb-1">
-              의무 이행 기한:{' '}
+              핵심 일정:{' '}
               <strong className="text-white">{opt.deadline}</strong>
               {opt.status === 'urgent' && (
                 <span className="ml-2 text-xs font-bold" style={{ color: '#FF9B6B' }}>

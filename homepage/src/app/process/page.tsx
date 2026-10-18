@@ -35,7 +35,7 @@ const howToSchema = {
   "@type": "HowTo",
   name: "정보통신설비 성능점검 절차",
   description:
-    "정보통신공사업법 제37조의2에 따른 성능점검 대행 서비스 이용 절차",
+    "정보통신공사업법 제37조의2~4에 따른 성능점검 대행 서비스 이용 절차",
   totalTime: "P14D",
   step: [
     {

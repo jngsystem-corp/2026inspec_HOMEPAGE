@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "제이앤지시스템 JNGSYSTEM | 정보통신설비 성능점검 & 유지보수 관리 전문",
   alternates: { canonical: "https://inspec.jngsystem.co.kr" },
   description:
-    "정보통신공사업법 제37조의2에 따른 성능점검 대행 및 유지보수·관리 위탁. 22년 기업 IT 인프라 유지보수 경험. 연면적 5천㎡ 이상 건축물 2026.7.18 마감.",
+    "정보통신공사업법 제37조의2~4에 따른 성능점검 대행 및 유지보수·관리 위탁. 22년 기업 IT 인프라 유지보수 경험. 연면적 1만㎡ 이상 건축물 의무 적용 중, 5천~1만㎡는 2027.7.19 적용.",
   keywords: [
     "정보통신설비성능점검업체",
     "정보통신설비유지보수",
@@ -29,13 +29,13 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "제이앤지시스템 JNGSYSTEM | 정보통신설비 성능점검 & 유지보수 관리 전문",
-    description: "정보통신공사업법 제37조의2에 따른 성능점검 대행 및 유지보수·관리 위탁. 22년 기업 IT 인프라 유지보수 경험. 연면적 5천㎡ 이상 건축물 2026.7.18 마감.",
+    description: "정보통신공사업법 제37조의2~4에 따른 성능점검 대행 및 유지보수·관리 위탁. 22년 기업 IT 인프라 유지보수 경험. 연면적 1만㎡ 이상 건축물 의무 적용 중, 5천~1만㎡는 2027.7.19 적용.",
     url: "https://inspec.jngsystem.co.kr",
   },
   twitter: {
     card: "summary_large_image",
-    title: "제이앤지시스템 | 정보통신설비 성능점검 & 유지보수 — 2026.7.18 마감",
-    description: "정보통신공사업법 제37조의2에 따른 성능점검 대행 및 유지보수·관리 위탁. 미이행 시 최대 300만원 과태료.",
+    title: "제이앤지시스템 | 정보통신설비 성능점검 & 유지보수 — 1만㎡ 이상 의무 적용 중",
+    description: "정보통신공사업법 제37조의2~4에 따른 성능점검 대행 및 유지보수·관리 위탁. 미이행 시 최대 300만원 과태료.",
   },
 };
 
@@ -82,7 +82,7 @@ const organizationSchema = {
     closes: "18:00",
   },
   description:
-    "정보통신공사업법 제37조의2에 따른 정보통신설비 성능점검 대행 및 유지보수·관리 위탁 전문 업체. 22년간 기업 IT 인프라(서버·네트워크·보안·PC) 유지보수 경험을 바탕으로 연면적 5,000㎡ 이상 건축물 관리주체의 법적 의무 이행을 지원합니다.",
+    "정보통신공사업법 제37조의2~4에 따른 정보통신설비 성능점검 대행 및 유지보수·관리 위탁 전문 업체. 22년간 기업 IT 인프라(서버·네트워크·보안·PC) 유지보수 경험을 바탕으로 연면적 5,000㎡ 이상 건축물 관리주체의 법적 의무 이행을 지원합니다.",
   slogan: "IT 전문가가 직접 수행하는 정보통신설비 성능점검·유지보수",
   knowsAbout: [
     "정보통신설비 성능점검",
@@ -98,7 +98,7 @@ const organizationSchema = {
     {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "license",
-      name: "과학기술정보통신부 정보통신공사업 등록",
+      name: "정보통신공사업 등록",
     },
   ],
   makesOffer: [
@@ -232,9 +232,9 @@ const differentiators = [
 
 // 법적 일정
 const deadlines = [
-  { range: "연면적 3만㎡ 이상", deadline: "2025. 7. 18.", status: "done" },
-  { range: "연면적 1만㎡ 이상 ~ 3만㎡ 미만", deadline: "2026. 7. 18.", status: "urgent" },
-  { range: "연면적 5천㎡ 이상 ~ 1만㎡ 미만", deadline: "2027. 7. 18.", status: "upcoming" },
+  { range: "연면적 3만㎡ 이상", deadline: "2025. 7. 19. 적용", status: "done" },
+  { range: "연면적 1만㎡ 이상 ~ 3만㎡ 미만", deadline: "2026. 7. 19. 적용", status: "urgent" },
+  { range: "연면적 5천㎡ 이상 ~ 1만㎡ 미만", deadline: "2027. 7. 19. 적용", status: "upcoming" },
 ];
 
 export default function HomePage() {
@@ -273,7 +273,7 @@ export default function HomePage() {
         <div className="relative z-10 container-main py-10 sm:py-20">
           <div className="inline-flex items-center gap-2 bg-[var(--color-warning)] text-white text-xs sm:text-sm font-bold px-3 sm:px-4 py-1.5 rounded-full mb-6">
             <AlertTriangle size={14} className="shrink-0" />
-            2026.7.18 마감 임박 — 연면적 1만~3만㎡ 건축물
+            연면적 1만~3만㎡ 의무 적용 중 — 첫 관리점검 기한 2027.1.18
           </div>
 
           <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4">
@@ -281,7 +281,7 @@ export default function HomePage() {
             <span style={{ color: "#60B0FF" }}>IT 전문가가 직접 수행합니다</span>
           </h1>
           <p className="text-white/80 text-base sm:text-lg mb-3 max-w-2xl leading-relaxed">
-            정보통신공사업법 제37조의2에 따라 연면적 5천㎡ 이상 건축물은 반드시 성능점검 및 유지보수 관리를 이행해야 합니다.
+            정보통신공사업법 제37조의2~4에 따라 연면적 5천㎡ 이상 건축물은 반드시 성능점검 및 유지보수 관리를 이행해야 합니다.
           </p>
           <p className="text-white/70 text-sm mb-6 max-w-xl leading-relaxed">
             저희는 22년간 기업 IT 시스템(서버·네트워크·보안·PC)의 성능·장애·운영을 유지보수해 온 경험을 바탕으로
@@ -292,7 +292,7 @@ export default function HomePage() {
           <HeroDiagnosis />
 
           <div className="mb-8">
-            <p className="text-white/50 text-sm mb-3">연면적 1만~3만㎡ 의무 이행까지 남은 시간</p>
+            <p className="text-white/50 text-sm mb-3">연면적 1만~3만㎡ 첫 유지보수·관리 점검 기한(2027.1.18)까지 남은 시간</p>
             <Countdown />
             <p className="mt-3 text-xs font-bold" style={{ color: "#FF9B6B" }}>
               ⚠ 미이행 시 최대 300만원 과태료 — 위반 항목 중복 시 합산 부과
@@ -443,7 +443,7 @@ export default function HomePage() {
             우리 건물의 의무 이행 기한은 언제인가요?
           </h2>
           <p className="mb-10 text-sm" style={{ color: "var(--color-gray-600)" }}>
-            시행 유예기한 내에 반드시 유지보수·관리 및 성능점검 체계를 갖추어야 합니다.
+            규모별 유예기한 다음 날부터 의무가 적용되며, 적용 후 6개월 안에 첫 유지보수·관리 점검, 1년 안에 첫 성능점검을 해야 합니다.
           </p>
 
           <div className="overflow-x-auto">
@@ -477,7 +477,7 @@ export default function HomePage() {
                       )}
                       {status === "urgent" && (
                         <span className="inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full bg-orange-100 text-orange-700">
-                          <AlertTriangle size={12} /> 올해 마감
+                          <AlertTriangle size={12} /> 첫 관리점검 2027.1.18
                         </span>
                       )}
                       {status === "upcoming" && (
@@ -494,8 +494,8 @@ export default function HomePage() {
           <div className="mt-4 rounded-xl px-5 py-4 flex items-start gap-3" style={{ background: "#fff8f5", border: "2px solid var(--color-warning)" }}>
             <AlertTriangle size={18} style={{ color: "var(--color-warning)" }} className="shrink-0 mt-0.5" />
             <p className="text-sm" style={{ color: "var(--color-gray-700)" }}>
-              <strong style={{ color: "var(--color-warning)" }}>🚨 연면적 3만㎡ 이상 대형 건축물:</strong>{" "}
-              2025년 7월 제도 시행 후 <strong>2026년 7월 18일까지 최초 성능점검 완료</strong>가 의무입니다.
+              <strong style={{ color: "var(--color-warning)" }}>🚨 연면적 1만~3만㎡ 건축물:</strong>{" "}
+              2026.7.19부터 의무 적용. 관리자 선임(또는 위탁) 기한 2026.8.18은 이미 지났습니다 — 아직이라면 즉시 선임하고, <strong>2027.1.18까지 첫 유지보수·관리 점검, 2027.7.18까지 첫 성능점검</strong>을 해야 합니다.
             </p>
           </div>
           <p className="mt-3 text-xs" style={{ color: "var(--color-gray-600)" }}>
@@ -577,12 +577,12 @@ export default function HomePage() {
             성능점검업체, 이렇게 선택하세요
           </h2>
           <p className="mb-8 text-sm max-w-2xl leading-relaxed" style={{ color: "var(--color-gray-600)" }}>
-            정보통신설비 성능점검은 과기정통부 등록 공사업자·용역업자만 대행할 수 있습니다.
+            정보통신설비 성능점검은 등록된 정보통신공사업자·용역업자만 대행할 수 있습니다.
             업체 선정 전 아래 5가지를 반드시 확인하세요.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
             {[
-              { no: "01", title: "정보통신공사업 등록 여부", desc: "과기정통부 등록 업체만 법정 대행 가능. 등록번호 확인 필수" },
+              { no: "01", title: "정보통신공사업 등록 여부", desc: "등록된 공사업자·용역업자만 법정 대행 가능. 등록번호 확인 필수" },
               { no: "02", title: "담당 기술자 등급", desc: "건축물 규모에 맞는 특급·고급·중급·초급 정보통신기술자 보유 여부" },
               { no: "03", title: "IT 설비 실운영 경험", desc: "체크리스트 기반 외관 점검이 아닌, 실제 IT 시스템 운영 경험" },
               { no: "04", title: "점검표 공식 양식 사용", desc: "성능점검표 공식 양식 기록 및 5년 보존·지자체 제출 지원" },
@@ -597,7 +597,7 @@ export default function HomePage() {
           </div>
           <div className="rounded-xl p-4 border-l-4" style={{ background: "var(--color-accent-light)", borderColor: "var(--color-accent)" }}>
             <p className="text-sm leading-relaxed" style={{ color: "var(--color-primary)" }}>
-              <strong>제이앤지시스템</strong>은 과기정통부 등록 정보통신공사업자로서, 22년간 기업 IT 인프라(서버·네트워크·보안·PC)를
+              <strong>제이앤지시스템</strong>은 등록 정보통신공사업자로서, 22년간 기업 IT 인프라(서버·네트워크·보안·PC)를
               직접 운영·유지보수한 기술자가 정보통신설비 성능점검 및 유지보수관리 위탁을 직접 수행합니다.
             </p>
           </div>

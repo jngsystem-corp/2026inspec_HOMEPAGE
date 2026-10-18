@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "우리 건물, 정보통신설비 점검 의무 대상인가요? — 연면적 5천㎡ 이상 확인",
-    description: "연면적 5천㎡ 이상 건축물(공동주택 제외)은 의무 대상. 규모별 마감: 1만~3만㎡는 2026.7.18.",
+    description: "연면적 5천㎡ 이상 건축물(공동주택 제외)은 의무 대상. 1만㎡ 이상은 의무 적용 중, 5천~1만㎡는 2027.7.19 적용.",
   },
 };
 
@@ -43,9 +43,9 @@ const targetBuildings = [
 ];
 
 const deadlines = [
-  { range: "연면적 3만㎡ 이상", deadline: "2025. 7. 18.", status: "done", badge: "시행 중" },
-  { range: "연면적 1만㎡ 이상 ~ 3만㎡ 미만", deadline: "2026. 7. 18.", status: "urgent", badge: "올해 마감" },
-  { range: "연면적 5천㎡ 이상 ~ 1만㎡ 미만", deadline: "2027. 7. 18.", status: "upcoming", badge: "준비 필요" },
+  { range: "연면적 3만㎡ 이상", deadline: "2025. 7. 19. 적용", status: "done", badge: "시행 중" },
+  { range: "연면적 1만㎡ 이상 ~ 3만㎡ 미만", deadline: "2026. 7. 19. 적용", status: "urgent", badge: "첫 관리점검 2027.1.18" },
+  { range: "연면적 5천㎡ 이상 ~ 1만㎡ 미만", deadline: "2027. 7. 19. 적용", status: "upcoming", badge: "준비 필요" },
 ];
 
 const faqs = [
@@ -221,11 +221,11 @@ export default function TargetPage() {
             <AlertTriangle size={20} style={{ color: "var(--color-warning)" }} className="shrink-0 mt-0.5" />
             <div>
               <p className="text-sm font-bold mb-1" style={{ color: "var(--color-warning)" }}>
-                🚨 연면적 3만㎡ 이상 대형 건축물 — 2026년 7월 18일까지 최초 성능점검 완료 필수
+                🚨 연면적 1만~3만㎡ 건축물 — 2026년 7월 19일부터 의무 적용
               </p>
               <p className="text-sm" style={{ color: "var(--color-gray-600)" }}>
-                2025년 7월부터 제도가 시행된 연면적 3만㎡ 이상 건축물은 <strong>법령상 매년 1회 이상 성능점검</strong> 의무에 따라
-                <strong> 2026년 7월 18일까지 최초 성능점검을 완료</strong>해야 합니다. 지금 바로 일정을 잡으세요.
+                관리자 선임(또는 위탁) 기한 2026.8.18은 이미 지났습니다 — 아직이라면 즉시 선임하고, <strong>2027.1.18까지 첫 유지보수·관리 점검</strong>,
+                <strong>2027.7.18까지 첫 성능점검</strong>을 해야 합니다. 연면적 3만㎡ 이상 건축물은 2025.7.19부터 이미 적용 중입니다.
               </p>
             </div>
           </div>

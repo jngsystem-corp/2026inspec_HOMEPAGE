@@ -88,9 +88,9 @@ declare global {
 function getAreaInfo(raw: string) {
   const num = parseInt(raw.replace(/,/g, ""), 10);
   if (!num || isNaN(num)) return null;
-  if (num >= 30000) return { range: "연면적 3만㎡ 이상",   deadline: "2025.7.18 시행 중", color: "var(--color-success)", urgent: false };
-  if (num >= 10000) return { range: "연면적 1만~3만㎡",    deadline: "2026.7.18 마감",    color: "#E85C0D",              urgent: true  };
-  if (num >=  5000) return { range: "연면적 5천~1만㎡",    deadline: "2027.7.18",         color: "var(--color-accent)",  urgent: false };
+  if (num >= 30000) return { range: "연면적 3만㎡ 이상",   deadline: "2025.7.19 적용 중", color: "var(--color-success)", urgent: false };
+  if (num >= 10000) return { range: "연면적 1만~3만㎡",    deadline: "첫 관리점검 2027.1.18",  color: "#E85C0D",              urgent: true  };
+  if (num >=  5000) return { range: "연면적 5천~1만㎡",    deadline: "2027.7.19 적용",    color: "var(--color-accent)",  urgent: false };
   return               { range: "연면적 5천㎡ 미만",    deadline: "대상 여부 확인 필요", color: "var(--color-gray-600)", urgent: false };
 }
 

@@ -14,7 +14,7 @@ function calcDiff(target: Date) {
   };
 }
 
-const TARGET = new Date("2026-07-18T00:00:00+09:00");
+const TARGET = new Date("2027-01-19T00:00:00+09:00");
 
 export default function Countdown() {
   const [time, setTime] = useState<{ days: number; hours: number; minutes: number; seconds: number } | null>(null);
