@@ -4,7 +4,7 @@ import PageLayout from "@/components/PageLayout";
 export const metadata: Metadata = {
   title: "개인정보 취급방침 | 제이앤지시스템 JNGSYSTEM",
   description: "제이앤지시스템(주식회사 제이앤지시스템)의 개인정보 취급방침입니다.",
-  alternates: { canonical: "https://jngsystem.com/privacy" },
+  alternates: { canonical: "https://inspec.jngsystem.co.kr/privacy" },
 };
 
 export default function PrivacyPage() {

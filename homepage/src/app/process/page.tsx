@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     "성능점검 절차",
     "유지보수 관리 절차",
   ],
-  alternates: { canonical: "https://jngsystem.com/process" },
+  alternates: { canonical: "https://inspec.jngsystem.co.kr/process" },
   openGraph: {
     title: "정보통신설비 성능점검 절차 — 상담부터 점검표 보존까지 6단계",
     description: "정보통신설비 성능점검 절차를 안내합니다. 상담 신청 → 현장 조사 → 계약 체결 → 관리점검 실시 → 성능점검 실시 → 점검표 기록·보존까지 6단계.",
-    url: "https://jngsystem.com/process",
+    url: "https://inspec.jngsystem.co.kr/process",
   },
   twitter: {
     card: "summary_large_image",

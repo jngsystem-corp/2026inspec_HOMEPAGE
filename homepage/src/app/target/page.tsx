@@ -16,11 +16,11 @@ export const metadata: Metadata = {
     "연면적 5천㎡ 이상 건축물",
     "정보통신설비 대상건축물",
   ],
-  alternates: { canonical: "https://jngsystem.com/target" },
+  alternates: { canonical: "https://inspec.jngsystem.co.kr/target" },
   openGraph: {
     title: "정보통신설비 유지보수 대상건축물 — 연면적 5천㎡ 이상 해당 여부 확인",
     description: "정보통신설비 유지보수·관리 및 성능점검 대상 건축물을 확인하세요. 연면적 5천㎡ 이상 건축물(공동주택 제외). 규모별 의무 이행 기한 안내.",
-    url: "https://jngsystem.com/target",
+    url: "https://inspec.jngsystem.co.kr/target",
   },
   twitter: {
     card: "summary_large_image",

@@ -40,7 +40,7 @@ export default function robots(): MetadataRoute.Robots {
       bot("PanguBot"), // Huawei Pangu
       bot("Diffbot"),
     ],
-    sitemap: "https://jngsystem.com/sitemap.xml",
-    host: "https://jngsystem.com",
+    sitemap: "https://inspec.jngsystem.co.kr/sitemap.xml",
+    host: "https://inspec.jngsystem.co.kr",
   };
 }

@@ -1,4 +1,4 @@
-const BASE = "https://jngsystem.com";
+const BASE = "https://inspec.jngsystem.co.kr";
 
 interface BreadcrumbItem {
   name: string;

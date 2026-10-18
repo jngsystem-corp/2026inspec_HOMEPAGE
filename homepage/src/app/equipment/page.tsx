@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     "점검 대상 설비",
     "정보통신설비 34개",
   ],
-  alternates: { canonical: "https://jngsystem.com/equipment" },
+  alternates: { canonical: "https://inspec.jngsystem.co.kr/equipment" },
   openGraph: {
     title: "정보통신설비 성능점검 대상 34개 설비 전체 목록",
     description: "정보통신설비 성능점검 대상 34개 설비 전체 목록. 통신설비 8개, 방송설비 1개, 정보설비 23개(CCTV·네트워크·홈네트워크·BEMS 등), 기타설비 2개.",
-    url: "https://jngsystem.com/equipment",
+    url: "https://inspec.jngsystem.co.kr/equipment",
   },
   twitter: {
     card: "summary_large_image",

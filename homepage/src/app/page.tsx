@@ -14,7 +14,7 @@ import HeroDiagnosis from "@/components/HeroDiagnosis";
 
 export const metadata: Metadata = {
   title: "제이앤지시스템 JNGSYSTEM | 정보통신설비 성능점검 & 유지보수 관리 전문",
-  alternates: { canonical: "https://jngsystem.com" },
+  alternates: { canonical: "https://inspec.jngsystem.co.kr" },
   description:
     "정보통신공사업법 제37조의2에 따른 성능점검 대행 및 유지보수·관리 위탁. 22년 기업 IT 인프라 유지보수 경험. 연면적 5천㎡ 이상 건축물 2026.7.18 마감.",
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "제이앤지시스템 JNGSYSTEM | 정보통신설비 성능점검 & 유지보수 관리 전문",
     description: "정보통신공사업법 제37조의2에 따른 성능점검 대행 및 유지보수·관리 위탁. 22년 기업 IT 인프라 유지보수 경험. 연면적 5천㎡ 이상 건축물 2026.7.18 마감.",
-    url: "https://jngsystem.com",
+    url: "https://inspec.jngsystem.co.kr",
   },
   twitter: {
     card: "summary_large_image",
@@ -42,18 +42,18 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
-  "@id": "https://jngsystem.com/#organization",
+  "@id": "https://inspec.jngsystem.co.kr/#organization",
   name: "제이앤지시스템",
   alternateName: ["주식회사 제이앤지시스템", "JNGSYSTEM", "JNG SYSTEM"],
   legalName: "주식회사 제이앤지시스템",
-  url: "https://jngsystem.com",
+  url: "https://inspec.jngsystem.co.kr",
   logo: {
     "@type": "ImageObject",
-    url: "https://jngsystem.com/JNGSYSTEM_2Line_Logo.png",
+    url: "https://inspec.jngsystem.co.kr/JNGSYSTEM_2Line_Logo.png",
     width: 800,
     height: 280,
   },
-  image: "https://jngsystem.com/opengraph-image",
+  image: "https://inspec.jngsystem.co.kr/opengraph-image",
   telephone: "+82-2-3444-3570",
   email: "sales@jngsystem.co.kr",
   taxID: "211-88-14679",
@@ -120,16 +120,16 @@ const organizationSchema = {
 const webSiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://jngsystem.com/#website",
-  url: "https://jngsystem.com",
+  "@id": "https://inspec.jngsystem.co.kr/#website",
+  url: "https://inspec.jngsystem.co.kr",
   name: "제이앤지시스템 JNGSYSTEM",
   inLanguage: "ko-KR",
-  publisher: { "@id": "https://jngsystem.com/#organization" },
+  publisher: { "@id": "https://inspec.jngsystem.co.kr/#organization" },
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://jngsystem.com/faq?q={search_term_string}",
+      urlTemplate: "https://inspec.jngsystem.co.kr/faq?q={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },

@@ -179,7 +179,7 @@ export default async function OgImage() {
               letterSpacing: "0.06em",
             }}
           >
-            jngsystem.com
+            inspec.jngsystem.co.kr
           </span>
         </div>
       </div>

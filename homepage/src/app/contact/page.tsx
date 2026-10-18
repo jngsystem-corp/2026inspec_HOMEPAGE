@@ -18,11 +18,11 @@ export const metadata: Metadata = {
     "성능점검 상담",
     "유지보수 관리 문의",
   ],
-  alternates: { canonical: "https://jngsystem.com/contact" },
+  alternates: { canonical: "https://inspec.jngsystem.co.kr/contact" },
   openGraph: {
     title: "무료 상담 신청 — 정보통신설비 성능점검·유지보수 문의",
     description: "정보통신설비 성능점검 대행 및 유지보수·관리 위탁 무료 상담을 신청하세요. 대상 여부 확인, 견적 안내, 법령 질문 모두 답변드립니다.",
-    url: "https://jngsystem.com/contact",
+    url: "https://inspec.jngsystem.co.kr/contact",
   },
   twitter: {
     card: "summary_large_image",

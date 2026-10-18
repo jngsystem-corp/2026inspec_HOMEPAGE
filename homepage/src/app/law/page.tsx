@@ -18,11 +18,11 @@ export const metadata: Metadata = {
     "과태료 300만원",
     "유지보수 관리자 선임",
   ],
-  alternates: { canonical: "https://jngsystem.com/law" },
+  alternates: { canonical: "https://inspec.jngsystem.co.kr/law" },
   openGraph: {
     title: "정보통신설비 유지보수·관리 법령 — 관리기준·선임·과태료 안내",
     description: "정보통신설비 유지보수·관리 및 성능점검 관련 법령 안내. 유지보수·관리 반기별 1회, 성능점검 매년 1회, 기록 5년 보존, 선임 간주, 과태료 300만원.",
-    url: "https://jngsystem.com/law",
+    url: "https://inspec.jngsystem.co.kr/law",
   },
   twitter: {
     card: "summary_large_image",
