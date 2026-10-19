@@ -470,6 +470,9 @@ export default function LawPage() {
                 ))}
               </tbody>
             </table>
+            <p className="mt-3 text-xs" style={{ color: "var(--color-gray-600)" }}>
+              ※ 표의 금액은 「정보통신공사업법 시행령」 별표 10의 부과기준 금액이며, 시행령 제58조제2항에 따라 위반의 정도·횟수·동기·결과 등을 고려해 2분의 1 범위에서 줄이거나 늘릴 수 있습니다(늘리는 경우에도 법 제78조제1항·제2항의 상한을 넘을 수 없음).
+            </p>
           </div>
 
           {/* 유예기한 요약 */}

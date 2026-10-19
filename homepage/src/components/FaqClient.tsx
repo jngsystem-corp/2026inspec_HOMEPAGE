@@ -2,12 +2,8 @@
 
 import { useState, useMemo, useRef, useEffect } from "react";
 import { Search, ChevronDown, ChevronUp, X } from "lucide-react";
-import type { FaqCategory, FaqItem } from "@/data/faq-data";
-import { allFaqItems } from "@/data/faq-data";
-
-interface Props {
-  categories: FaqCategory[];
-}
+import type { FaqItem } from "@/data/faq-data";
+import { faqCategories, allFaqItems } from "@/data/faq-data";
 
 function highlight(text: string, query: string): React.ReactNode {
   if (!query.trim()) return text;
@@ -24,7 +20,7 @@ function highlight(text: string, query: string): React.ReactNode {
   );
 }
 
-export default function FaqClient({ categories }: Props) {
+export default function FaqClient() {
   const [query, setQuery] = useState("");
   const [activeCategory, setActiveCategory] = useState<string>("전체");
   const [openItems, setOpenItems] = useState<Set<string>>(new Set());
@@ -32,7 +28,7 @@ export default function FaqClient({ categories }: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
   const suggestionsRef = useRef<HTMLDivElement>(null);
 
-  const categoryTabs = ["전체", ...categories.map((c) => c.shortTitle)];
+  const categoryTabs = ["전체", ...faqCategories.map((c) => c.shortTitle)];
 
   // 검색어 기반 유사 제목 추천 (최대 5개)
   const suggestions = useMemo(() => {
@@ -46,7 +42,7 @@ export default function FaqClient({ categories }: Props) {
   // 검색 + 카테고리 필터 결과
   const filteredCategories = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return categories
+    return faqCategories
       .filter((cat) => activeCategory === "전체" || cat.shortTitle === activeCategory)
       .map((cat) => ({
         ...cat,
@@ -58,7 +54,7 @@ export default function FaqClient({ categories }: Props) {
         ),
       }))
       .filter((cat) => cat.items.length > 0);
-  }, [query, activeCategory, categories]);
+  }, [query, activeCategory]);
 
   const totalResults = filteredCategories.reduce((s, c) => s + c.items.length, 0);
 
@@ -251,24 +247,27 @@ export default function FaqClient({ categories }: Props) {
                 {cat.items.map((item) => {
                   const isOpen = openItems.has(item.id);
                   return (
-                    <div
+                    <details
                       key={item.id}
                       id={item.id}
+                      open={isOpen}
                       className="rounded-xl border overflow-hidden scroll-mt-24 transition-shadow"
                       style={{
                         borderColor: isOpen ? "var(--color-accent)" : "var(--color-border)",
                         boxShadow: isOpen ? "0 2px 12px rgba(0,112,243,0.10)" : undefined,
                       }}
                     >
-                      <button
-                        onClick={() => toggleItem(item.id)}
-                        className="w-full flex items-start justify-between gap-3 px-5 py-4 text-left transition-colors"
+                      <summary
+                        onClick={(e) => {
+                          e.preventDefault();
+                          toggleItem(item.id);
+                        }}
+                        className="w-full flex items-start justify-between gap-3 px-5 py-4 text-left transition-colors list-none [&::-webkit-details-marker]:hidden cursor-pointer"
                         style={{
                           background: isOpen ? "var(--color-accent-light)" : "#fff",
                         }}
-                        aria-expanded={isOpen}
                       >
-                        <div className="flex items-start gap-3 min-w-0">
+                        <span className="flex items-start gap-3 min-w-0">
                           <span
                             className="shrink-0 font-extrabold text-sm mt-0.5"
                             style={{ color: "var(--color-accent)" }}
@@ -281,34 +280,32 @@ export default function FaqClient({ categories }: Props) {
                           >
                             {highlight(item.q, query)}
                           </span>
-                        </div>
+                        </span>
                         <span className="shrink-0 mt-0.5" style={{ color: "var(--color-gray-600)" }}>
                           {isOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
                         </span>
-                      </button>
+                      </summary>
 
-                      {isOpen && (
-                        <div
-                          className="px-5 py-4 border-t"
-                          style={{ borderColor: "var(--color-accent)", background: "#fff" }}
-                        >
-                          <div className="flex gap-3">
-                            <span
-                              className="shrink-0 font-extrabold text-sm mt-0.5"
-                              style={{ color: "var(--color-warning)" }}
-                            >
-                              A
-                            </span>
-                            <p
-                              className="text-sm leading-relaxed"
-                              style={{ color: "var(--color-gray-600)" }}
-                            >
-                              {highlight(item.a, query)}
-                            </p>
-                          </div>
+                      <div
+                        className="px-5 py-4 border-t"
+                        style={{ borderColor: "var(--color-accent)", background: "#fff" }}
+                      >
+                        <div className="flex gap-3">
+                          <span
+                            className="shrink-0 font-extrabold text-sm mt-0.5"
+                            style={{ color: "var(--color-warning)" }}
+                          >
+                            A
+                          </span>
+                          <p
+                            className="text-sm leading-relaxed"
+                            style={{ color: "var(--color-gray-600)" }}
+                          >
+                            {highlight(item.a, query)}
+                          </p>
                         </div>
-                      )}
-                    </div>
+                      </div>
+                    </details>
                   );
                 })}
               </div>

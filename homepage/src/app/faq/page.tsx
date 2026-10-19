@@ -129,19 +129,7 @@ export default function FaqPage() {
           </div>
 
           {/* 클라이언트 컴포넌트: 검색·필터·아코디언 */}
-          <FaqClient categories={faqCategories} />
-
-          {/* SSR 콘텐츠: AI 크롤러를 위한 전체 Q&A (CSS로 숨기지 않고 노출) */}
-          <div className="sr-only" aria-hidden="true">
-            {faqCategories.map((cat) =>
-              cat.items.map((item) => (
-                <div key={item.id}>
-                  <h3>{item.q}</h3>
-                  <p>{item.a}</p>
-                </div>
-              ))
-            )}
-          </div>
+          <FaqClient />
 
           {/* 하단 CTA */}
           <div
